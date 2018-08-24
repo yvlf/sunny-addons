@@ -1,0 +1,35 @@
+{
+  "name": "sunnyos/yee-addons",
+  "description": "addons package for Yee",
+  "homepage": "https://github.com/sunnyos/yee-addons",
+  "license": "Apache-2.0",
+  "minimum-stability": "dev",
+  "version": "0.1",
+  "authors": [
+    {
+      "name": "sunny",
+      "email": "admin@sunnyos.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/sunnyos/yee-addons/issues"
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "topthink/think-helper": ">=1.0.4",
+    "topthink/think-installer": ">=1.0.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Yee\\": "src/"
+    },
+    "files": [
+      "src/common.php"
+    ]
+  },
+  "extra": {
+    "think-config": {
+      "addons": "src/config.php"
+    }
+  }
+}
