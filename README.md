@@ -31,6 +31,7 @@ return [
 
 ```
 
+
 ## 创建插件
 > 创建的插件可以在view视图中使用，也可以在php业务中使用
  
@@ -42,7 +43,7 @@ return [
 > 在addons目录中创建sunny目录
 
 ### 创建钩子实现类
-> 在test目录中创建Sunny.php类文件。注意：类文件首字母需大写
+> 在sunny目录中创建Sunny.php类文件。注意：类文件首字母需大写
 
 ```php
 <?php
@@ -82,6 +83,15 @@ class Sunny extends Addons
 
 ```
 
+addons.php 配置文件里面的route定义了插件的访问路由，将会有插件管理类自动注册到tp路由里面
+如访问 a.com/sunny 访问到的控制器就是 /addons/sunny/controller/Index/index
+
+sunny 插件名
+
+Index 控制器名称
+
+index 操作名称
+
 ### 创建插件配置文件
 > 在sunny目录中创建config.php类文件，插件配置文件可以省略。
 
@@ -117,13 +127,13 @@ return [
 如果插件中需要有链接或提交数据的业务，可以在插件中创建controller业务文件，
 要访问插件中的controller时使用addon_url生成url链接。
 如下：
-<a href="{:addon_url('sunny://Index/index')}">link test</a>
+<a href="{:addon_url('sunny://Index/index')}">Sunny Test</a>
 格式为：
 sunny为插件名，Index为controller中的类名，index为controller中的方法
 ```
 
 ### 创建插件的controller文件
-> 在test目录中创建controller目录，在controller目录中创建Index.php文件
+> 在sunny目录中创建controller目录，在controller目录中创建Index.php文件
 > controller类的用法与tp5中的controller一致
 
 ```php
@@ -136,6 +146,7 @@ class Index extends Controller
     }
 }
 ```
+
 > 如果需要使用view模板则需要继承`\think\addons\Controller`类
 > 模板文件所在位置为插件目录的view中，规则与模块中的view规则一致
 
