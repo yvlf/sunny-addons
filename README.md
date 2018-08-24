@@ -6,7 +6,7 @@
 
 ### 安装方式
 
-``shell
+``
 composer require sunnyos/yee-addons
 ``
 
