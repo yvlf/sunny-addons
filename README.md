@@ -83,15 +83,6 @@ class Sunny extends Addons
 
 ```
 
-addons.php 配置文件里面的route定义了插件的访问路由，将会有插件管理类自动注册到tp路由里面
-如访问 a.com/sunny 访问到的控制器就是 /addons/sunny/controller/Index/index
-
-sunny 插件名
-
-Index 控制器名称
-
-index 操作名称
-
 ### 创建插件配置文件
 > 在sunny目录中创建config.php类文件，插件配置文件可以省略。
 
@@ -161,6 +152,13 @@ class Index extends Controller
     }
 }
 ```
+
+> 那么定义好的控制器怎么样才能访问到呢？在 addons.php 配置文件里面的route定义了插件的访问路由
+>如访问 a.com/sunny 访问到的控制器就是 /addons/sunny/controller/Index/index
+
+* sunny 插件名
+* Index 控制器名称
+* index 操作名称
 
 ## 使用钩子
 > 创建好插件后就可以在正常业务中使用该插件中的钩子了
