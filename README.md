@@ -4,6 +4,12 @@
 
 原项目地址：[fastadmin-addons](https://github.com/karsonzhang/fastadmin-addons)
 
+### 安装方式
+
+``shell
+composer require sunnyos/yee-addons
+``
+
 #### 配置
 
 在config文件夹下新增文件 addons.php ，配置内容
